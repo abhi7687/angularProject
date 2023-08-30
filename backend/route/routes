@@ -1,0 +1,10 @@
+var express = require('express');
+
+var adminController = require('../src/admin/adminController');
+const router = express.Router();
+
+router.route('/admin/login').post(adminController.loginAdminControllerFn);
+router.route('/admin/create').post(adminController.createAdminControllerFn);
+
+
+module.exports = router;
